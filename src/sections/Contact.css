@@ -129,4 +129,32 @@ a.contact-value:hover {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+  
+  .contact-intro {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-intro {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-item {
+    gap: 1rem;
+  }
+  
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
 }

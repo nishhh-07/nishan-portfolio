@@ -116,6 +116,10 @@
 
 /* Mobile Styles */
 @media (max-width: 968px) {
+  .nav-content {
+    padding: 1rem 0;
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -156,5 +160,12 @@
   .mobile-nav .btn {
     margin-top: 0.5rem;
     justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-brand {
+    font-size: 1.125rem;
   }
 }

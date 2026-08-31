@@ -122,6 +122,7 @@
   .timeline-item {
     grid-template-columns: 40px 1fr;
     gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .timeline-icon {
@@ -131,9 +132,38 @@
 
   .experience-header {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   .experience-duration {
     align-self: flex-start;
+  }
+  
+  .experience-title {
+    font-size: 1.125rem;
+  }
+  
+  .experience-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    grid-template-columns: 35px 1fr;
+    gap: 0.875rem;
+  }
+
+  .timeline-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .experience-card {
+    padding: 1.25rem;
+  }
+  
+  .experience-title {
+    font-size: 1rem;
   }
 }

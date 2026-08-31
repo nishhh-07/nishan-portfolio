@@ -66,5 +66,25 @@
 @media (max-width: 768px) {
   .education-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .education-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+  }
+  
+  .education-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1rem;
   }
 }

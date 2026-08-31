@@ -161,16 +161,34 @@
 @media (max-width: 1200px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 640px) {
+  .project-card {
+    margin: 0 -0.5rem;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
   .project-buttons {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   .project-buttons .btn {
     width: 100%;
     justify-content: center;
+  }
+  
+  .project-image {
+    height: 200px;
   }
 }
