@@ -126,6 +126,7 @@
 
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
 
   .mobile-nav {
@@ -136,25 +137,30 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    background: var(--bg-primary);
   }
 
   .mobile-nav.open {
     max-height: 600px;
     border-top: 1px solid var(--border-color);
     margin-top: 1rem;
+    padding-bottom: 2rem;
   }
 
   .mobile-nav-link {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     transition: var(--transition);
+    border-bottom: 1px solid transparent;
   }
 
-  .mobile-nav-link:hover {
+  .mobile-nav-link:hover,
+  .mobile-nav-link:active {
     color: var(--text-primary);
     padding-left: 0.5rem;
+    border-bottom-color: var(--accent-primary);
   }
 
   .mobile-nav .btn {
@@ -167,5 +173,9 @@
 @media (max-width: 640px) {
   .nav-brand {
     font-size: 1.125rem;
+  }
+  
+  .mobile-menu-btn {
+    padding: 0.5rem;
   }
 }
