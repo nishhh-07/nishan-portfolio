@@ -4,18 +4,18 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.9);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
-  transition: var(--transition);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.98);
+  background: var(--navbar-bg-scrolled);
   border-bottom-color: var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px var(--shadow-color);
 }
 
 .navbar.menu-open {
@@ -194,7 +194,6 @@
     border-top: 1px solid var(--border-color);
     padding: 1rem 0 1.5rem;
   }
-
   .mobile-nav-link {
     color: var(--text-secondary);
     text-decoration: none;
