@@ -5,7 +5,7 @@
 }
 
 :root {
-  /* Colors */
+  /* Colors — Dark Mode (default) */
   --bg-primary: #0a0a0a;
   --bg-secondary: #111111;
   --bg-tertiary: #1a1a1a;
@@ -16,7 +16,9 @@
   --text-tertiary: #9ca3af;
   --border-color: #27272a;
   --border-light: #3f3f46;
-  
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(26, 26, 26, 0.6);
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -25,12 +27,28 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
-  
+
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-  
+
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --accent-primary: #2563eb;
+  --accent-hover: #1d4ed8;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --border-color: #e2e8f0;
+  --border-light: #cbd5e1;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
 html {
@@ -49,6 +67,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -164,7 +183,7 @@ section {
 }
 
 .glass-card {
-  background: rgba(26, 26, 26, 0.6);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
   border-radius: 12px;
