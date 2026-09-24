@@ -72,7 +72,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isOpen ? 'menu-open' : ''}`}>
       <div className="container">
         <div className="nav-content">
           <a href="#home" className="nav-brand" onClick={(e) => handleNavClick(e, '#home')}>
